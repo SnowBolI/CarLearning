@@ -1,7 +1,6 @@
 import pickle
 import streamlit as st
 import pandas as pd
-import os
 import numpy as np
 import altair as alt
 
@@ -18,15 +17,15 @@ df2 = df1[df1['CarName'].isin(brands)]
 st.dataframe(df2)
 
 st.write("Grafik Highway-mpg")
-chart_highwaympg = pd.DataFrame(df2, columns=["highwaympg"])
+chart_highwaympg = pd.DataFrame(df1, columns=["highwaympg"])
 st.line_chart(chart_highwaympg)
 
 st.write("Grafik curbweight")
-chart_curbweight = pd.DataFrame(df2, columns=["curbweight"])
+chart_curbweight = pd.DataFrame(df1, columns=["curbweight"])
 st.line_chart(chart_curbweight)
 
 st.write("Grafik horsepower")
-chart_horsepower = pd.DataFrame(df2, columns=["horsepower"])
+chart_horsepower = pd.DataFrame(df1, columns=["horsepower"])
 st.line_chart(chart_horsepower)
 
 #input nilai dari variable independent
