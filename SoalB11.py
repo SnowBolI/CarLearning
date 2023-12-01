@@ -7,7 +7,7 @@ import altair as alt
 model = pickle.load(open('model_prediksi_harga_mobil.sav', 'rb'))
 
 st.title('Prediksi Harga Mobil')
-
+st.image('./herta.gif')
 st.header("Dataset")
 #open file csv
 df1 = pd.read_csv('CarPrice.csv')
